@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome Article List</title>
+    <link rel="stylesheet" href="/articles.css">
+  </head>
+  <body>
+    <ul>
+      <% @articles.each do |article| %>
+        <li>Title: <%= article["title"] %></li>
+        <li>URL: <a href="<%= article["url"] %>"><%= article["url"] %></a></li>
+        <li>Article Description: <%= article["description"] %> </li>
+      <% end %>
+    </ul>
+
+
+  </body>
+</html>
